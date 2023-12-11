@@ -8,16 +8,64 @@ body {
   background-color: rgb(18, 122, 190);
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 19200px) {
   .app-body {
     background: white;
-    width: 50%;
+    width: 30%;
     margin: 100px auto 0;
     border-radius: 10px;
     padding: 30px;
+    min-width: 405px;
   }
-  .app-body h1 {
-    font-weight: 25px;
+  h1 {
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+  }
+  .Quiz {
+    padding: 20px;
+  }
+  .Quiz h2 {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .Answer-buttons {
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .Answer-buttons .btn {
+    width: 48%;
+    min-width: 145px;
+    margin: 2px;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 3px;
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+  }
+  .Answer-buttons .btn:hover {
+    background-color: #9c9a9a;
+    color: #fff;
+    transition: 0.4s;
+  }
+  #next-btn {
+    background-color: rgb(19, 103, 160);
+    color: white;
+    width: 40%;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 10px auto 0;
+    border: 0px;
+    display: none;
+    cursor: pointer;
+  }
+  #next-btn:hover {
+    background-color: rgb(47, 120, 168);
+    transition: 0.2s;
   }
 }
 @media screen and (max-width: 480px) {
@@ -27,6 +75,7 @@ body {
     margin: 100px auto 0;
     border-radius: 10px;
     padding: 30px;
+    min-width: 300px;
   }
   h1 {
     font-size: 25px;
