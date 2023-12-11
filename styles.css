@@ -50,7 +50,7 @@ body {
   .Answer-buttons .btn:hover {
     background-color: #9c9a9a;
     color: #fff;
-    transition: 0.4s;
+    transition: 0.4s ease;
   }
   #next-btn {
     background-color: rgb(19, 103, 160);
@@ -66,6 +66,12 @@ body {
   #next-btn:hover {
     background-color: rgb(47, 120, 168);
     transition: 0.2s;
+  }
+  .correct {
+    background: green;
+  }
+  .incorrect {
+    background: red;
   }
 }
 @media screen and (max-width: 480px) {
@@ -126,6 +132,10 @@ body {
     background-color: rgb(47, 120, 168);
     transition: 0.2s;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+  .correct {
+    background: green;
+  }
+  .incorrect {
+    background: red;
+  }
+}/*# sourceMappingURL=Styles.css.map */
