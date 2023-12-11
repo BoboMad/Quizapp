@@ -78,15 +78,49 @@ function resetState(){
     }
 }
 
-function SelectAnswer(){
+function SelectAnswer(e){
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct == 'true';
     if (isCorrect){
-        selectedBtn.classList.add('correct')
+        selectedBtn.classList.add('correct');
+        score++;
     }
     else{
-        selectedBtn.classList.add('incorrect')
+        selectedBtn.classList.add('incorrect');
+    }
+    Array.from(answerQuery.children).forEach(button => {
+        if(button.dataset.correct === 'true'){
+            button.classList.add('correct');
+        }
+        button.disabled = true;
+    });
+    NextButtonQuery.style.display = 'block';
+}
+
+function showScore(){
+    resetState();
+    questionQuery.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    NextButtonQuery.innerHTML = 'Play Again';
+    NextButtonQuery.style.display = 'block';
+    nex
+}
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        ShowQuestion();
+    }else{
+        showScore();
     }
 }
+
+
+NextButtonQuery.addEventListener('click', ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+});
 
 startQuiz();

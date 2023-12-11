@@ -78,6 +78,13 @@ body{
         }
     }
 
+    .correct{
+        background: green;
+    }
+    .incorrect{
+        background: red;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -147,6 +154,12 @@ body{
             transition: 0.2s;
         }
     }
+    .correct {
+        background: green;
+      }
+      .incorrect {
+        background: red;
+      }
 
 }
 
