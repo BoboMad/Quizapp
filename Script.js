@@ -74,7 +74,8 @@ function ShowQuestion(){
 function resetState(){
     NextButtonQuery.style.display = 'none';
     while(answerQuery.firstChild){
-        answerQuery.removeChild(answerQuery.firstChild)
+        answerQuery.firstChild.remove();
+        // answerQuery.removeChild(answerQuery.firstChild)
     }
 }
 
