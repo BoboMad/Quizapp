@@ -93,8 +93,10 @@ function SelectAnswer(e){
         if(button.dataset.correct === 'true'){
             button.classList.add('correct');
         }
+        button.style.pointerEvents = 'None';
         button.disabled = true;
     });
+    
     NextButtonQuery.style.display = 'block';
 }
 

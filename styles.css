@@ -8,7 +8,7 @@ body {
   background-color: rgb(18, 122, 190);
 }
 
-@media screen and (max-width: 19200px) {
+@media screen and (max-width: 1920px) {
   .app-body {
     background: white;
     width: 30%;
@@ -45,12 +45,21 @@ body {
     margin: 10px 3px;
     border-radius: 4px;
     text-align: left;
+    background-color: rgb(242, 248, 255);
     cursor: pointer;
   }
   .Answer-buttons .btn:hover {
     background-color: #9c9a9a;
     color: #fff;
     transition: 0.4s ease;
+  }
+  .Answer-buttons .correct {
+    background: rgba(75, 239, 75, 0.59);
+    color: #504f4f;
+  }
+  .Answer-buttons .incorrect {
+    background: rgba(255, 0, 0, 0.493);
+    color: #504f4f;
   }
   #next-btn {
     background-color: rgb(19, 103, 160);
@@ -66,12 +75,6 @@ body {
   #next-btn:hover {
     background-color: rgb(47, 120, 168);
     transition: 0.2s;
-  }
-  .correct {
-    background: green;
-  }
-  .incorrect {
-    background: red;
   }
 }
 @media screen and (max-width: 480px) {
@@ -110,12 +113,21 @@ body {
     margin: 10px 3px;
     border-radius: 4px;
     text-align: left;
+    background-color: rgb(242, 248, 255);
     cursor: pointer;
   }
   .Answer-buttons .btn:hover {
-    background-color: #9c9a9a;
+    background-color: rgba(62, 63, 63, 0.4156862745);
     color: #fff;
     transition: 0.4s;
+  }
+  .Answer-buttons .correct {
+    background: rgba(75, 239, 75, 0.59);
+    color: #504f4f;
+  }
+  .Answer-buttons .incorrect {
+    background: rgba(255, 0, 0, 0.493);
+    color: #504f4f;
   }
   #next-btn {
     background-color: rgb(19, 103, 160);
@@ -132,10 +144,6 @@ body {
     background-color: rgb(47, 120, 168);
     transition: 0.2s;
   }
-  .correct {
-    background: green;
-  }
-  .incorrect {
-    background: red;
-  }
-}/*# sourceMappingURL=Styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
