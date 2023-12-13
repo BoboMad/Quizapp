@@ -55,10 +55,11 @@ body{
             cursor: pointer;
 
             &:hover{
-                background-color: #9c9a9a;
+                background-color: #3e3f3f6a;
                 color: #fff;
-                transition: 0.4s ease;
-                border: 3px solid #222;
+                transition: 0.2s;
+                border: 2px solid #6b6b6b;
+                padding: 9px;
             }
         }
         .correct{
@@ -139,7 +140,7 @@ body{
                 background-color: #3e3f3f6a;
                 color: #fff;
                 transition: 0.2s;
-                border: 2px solid #222;
+                border: 1px solid #222;
                 padding: 9px;
             }
         }
@@ -168,7 +169,7 @@ body{
         &:hover{
             background-color: rgb(47, 120, 168);
             transition: 0.2s;
-            border: 1px solid #222;
+            border: 2px solid #6b6b6b;
         }
     }
 
