@@ -52,6 +52,7 @@ body {
     background-color: #9c9a9a;
     color: #fff;
     transition: 0.4s ease;
+    border: 3px solid #222;
   }
   .Answer-buttons .correct {
     background: rgba(75, 239, 75, 0.59);
@@ -119,7 +120,9 @@ body {
   .Answer-buttons .btn:hover {
     background-color: rgba(62, 63, 63, 0.4156862745);
     color: #fff;
-    transition: 0.4s;
+    transition: 0.2s;
+    border: 2px solid #222;
+    padding: 9px;
   }
   .Answer-buttons .correct {
     background: rgba(75, 239, 75, 0.59);
@@ -143,6 +146,14 @@ body {
   #next-btn:hover {
     background-color: rgb(47, 120, 168);
     transition: 0.2s;
+    border: 1px solid #222;
+  }
+  .question-counter {
+    background-color: #fff;
+    width: 10%;
+    position: relative;
+    bottom: 0;
+    left: 0;
   }
 }
 

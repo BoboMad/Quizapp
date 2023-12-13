@@ -40,6 +40,7 @@ const questions = [
 const questionQuery = document.querySelector('#question');
 const answerQuery = document.querySelector('.Answer-buttons');
 const NextButtonQuery = document.querySelector('#next-btn');
+const questionCounterQuery = document.querySelector("#question-counter p");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -68,6 +69,9 @@ function ShowQuestion(){
         button.addEventListener('click', SelectAnswer);
         
     })
+
+    questionCounterQuery.style.display = "block";
+    questionCounter();
 }
 
 
@@ -105,7 +109,7 @@ function showScore(){
     questionQuery.innerHTML = `You scored ${score} out of ${questions.length}!`;
     NextButtonQuery.innerHTML = 'Play Again';
     NextButtonQuery.style.display = 'block';
-    nex
+    questionCounterQuery.style.display = "none";
 }
 
 function handleNextButton(){
@@ -125,5 +129,10 @@ NextButtonQuery.addEventListener('click', ()=>{
         startQuiz();
     }
 });
+
+function questionCounter(){
+    let questionNumber = currentQuestionIndex +1;
+    questionCounterQuery.innerHTML = `${questionNumber}/${questions.length}`;
+}
 
 startQuiz();
