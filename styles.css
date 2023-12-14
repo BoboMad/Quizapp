@@ -17,12 +17,6 @@ body {
     padding: 30px;
     min-width: 405px;
   }
-  h1 {
-    font-size: 25px;
-    font-weight: 600;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;
-  }
   .Quiz {
     padding: 20px;
   }
@@ -63,6 +57,23 @@ body {
     background: rgba(255, 0, 0, 0.493);
     color: #504f4f;
   }
+  .Answer-buttons .question-counter {
+    background-color: #fff;
+    width: 10%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .Answer-buttons .quiz-header {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+  }
+  .Answer-buttons .quiz-header h1 {
+    font-size: 25px;
+    font-weight: 600;
+  }
   #next-btn {
     background-color: rgb(19, 103, 160);
     color: white;
@@ -87,12 +98,6 @@ body {
     border-radius: 10px;
     padding: 30px;
     min-width: 300px;
-  }
-  h1 {
-    font-size: 25px;
-    font-weight: 600;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;
   }
   .Quiz {
     padding: 20px;
@@ -147,7 +152,6 @@ body {
   #next-btn:hover {
     background-color: rgb(47, 120, 168);
     transition: 0.2s;
-    border: 2px solid #6b6b6b;
   }
   .question-counter {
     background-color: #fff;
@@ -155,6 +159,28 @@ body {
     position: relative;
     bottom: 0;
     left: 0;
+  }
+  .quiz-header {
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+    position: relative;
+  }
+  .quiz-header h1 {
+    font-size: 25px;
+    font-weight: 600;
+    display: inline;
+  }
+  .quiz-header .timer-clock {
+    display: inline;
+    position: absolute;
+    right: 0;
+  }
+  .quiz-header .timer-bar {
+    height: 5px;
+    width: 100%;
+    background: limegreen;
+    position: absolute;
+    bottom: 0px;
   }
 }
 

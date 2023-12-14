@@ -41,6 +41,8 @@ const questionQuery = document.querySelector('#question');
 const answerQuery = document.querySelector('.Answer-buttons');
 const NextButtonQuery = document.querySelector('#next-btn');
 const questionCounterQuery = document.querySelector("#question-counter p");
+const timerClockQuery = document.querySelector(".timer-clock");
+const timerBarQuery = document.querySelector(".timer-bar");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -72,15 +74,20 @@ function ShowQuestion(){
 
     questionCounterQuery.style.display = "block";
     questionCounter();
+    countdownClock();
+    countdownBar();
 }
 
 
 function resetState(){
     NextButtonQuery.style.display = 'none';
+    timerBarQuery.style.display = "block";
+    timerClockQuery.style.display = "inline";
     while(answerQuery.firstChild){
         answerQuery.firstChild.remove();
         // answerQuery.removeChild(answerQuery.firstChild)
     }
+
 }
 
 function SelectAnswer(e){
@@ -101,6 +108,8 @@ function SelectAnswer(e){
         button.disabled = true;
     });
     
+    stopTimers();
+
     NextButtonQuery.style.display = 'block';
 }
 
@@ -110,9 +119,14 @@ function showScore(){
     NextButtonQuery.innerHTML = 'Play Again';
     NextButtonQuery.style.display = 'block';
     questionCounterQuery.style.display = "none";
+    
+    resetTimers();
+    timerClockQuery.style.display = "none";
+    timerBarQuery.style.display = "none";
 }
 
 function handleNextButton(){
+    resetTimers();
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         ShowQuestion();
@@ -133,6 +147,68 @@ NextButtonQuery.addEventListener('click', ()=>{
 function questionCounter(){
     let questionNumber = currentQuestionIndex +1;
     questionCounterQuery.innerHTML = `${questionNumber}/${questions.length}`;
+}
+
+let clockInterval;
+function countdownClock(){
+    let Time = 15;
+
+    timerClockQuery.textContent = Time;
+    Time--;
+
+    clockInterval = setInterval(() =>{
+        if(Time >= 0){
+        timerClockQuery.textContent = Time;
+        Time--;
+        }
+        else{
+            clearInterval(clockInterval);
+            noAnswerGiven();
+        }
+    }, 1000 )
+}
+
+let barInterval;
+function countdownBar(){
+    const totalTime = 1500;
+    let remainingTime = totalTime;
+
+    barInterval = setInterval(() =>{
+            if(remainingTime >= 0){
+                timerBarQuery.style.width = (remainingTime /totalTime) * 100 + "%";
+                remainingTime -= 1;
+            }
+            else{
+                clearInterval(barInterval);
+                noAnswerGiven();
+            }
+    }, 10);
+}
+
+function resetTimers(){
+    clearInterval(clockInterval);
+    clearInterval(barInterval);    
+}
+
+function stopTimers(){
+    clearInterval(barInterval);
+    clearInterval(clockInterval);
+}
+
+function noAnswerGiven(){
+    const correctAnswer = questions[currentQuestionIndex].answers.find(answer => answer.correct);
+
+    questionQuery.textContent = "No answer given!"
+
+    Array.from(answerQuery.children).forEach(button => {
+        if(button.textContent == correctAnswer.text){
+            button.classList.add("correct")
+        }
+        button.disabled = true;
+        button.style.pointerEvents = "none";
+    })
+
+    NextButtonQuery.style.display = 'block';
 }
 
 startQuiz();
