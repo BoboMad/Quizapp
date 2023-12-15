@@ -182,10 +182,14 @@ function countdownBar(){
                 clearInterval(barInterval);
                 noAnswerGiven();
             }
+            if(remainingTime <= 500){
+                timerBarQuery.style.background = "red";
+            }
     }, 10);
 }
 
 function resetTimers(){
+    timerBarQuery.style.background = "limegreen";
     clearInterval(clockInterval);
     clearInterval(barInterval);    
 }
