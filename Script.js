@@ -51,7 +51,8 @@ function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     NextButtonQuery.innerHTML = 'Next';
-    ShowQuestion();
+    //ShowQuestion();
+    showStartQuiz();
 }
 
 function ShowQuestion(){
@@ -59,6 +60,8 @@ function ShowQuestion(){
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionQuery.innerHTML = questionNo + '. ' + currentQuestion.question;
+    answerQuery.style.display = "block";
+    NextButtonQuery.innerHTML = "Next"
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement('button');
@@ -76,6 +79,20 @@ function ShowQuestion(){
     questionCounter();
     countdownClock();
     countdownBar();
+}
+
+function showStartQuiz(){
+    currentQuestionIndex = -1;
+    questionCounterQuery.style.display = "none";
+    answerQuery.style.display = "none";
+    NextButtonQuery.innerHTML = "Start";
+    NextButtonQuery.style.display = "block";
+    questionQuery.innerHTML = "Click start to begin the quiz";
+    resetTimers();
+    timerBarQuery.style.display = "none";
+    timerClockQuery.style.display = "none";
+
+
 }
 
 
@@ -130,7 +147,8 @@ function handleNextButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         ShowQuestion();
-    }else{
+    }
+    else{
         showScore();
     }
 }
