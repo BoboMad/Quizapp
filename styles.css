@@ -92,6 +92,7 @@ body {
     display: inline;
     position: absolute;
     right: 0;
+    font-weight: 600;
   }
   .quiz-header .timer-bar {
     height: 5px;
@@ -99,6 +100,65 @@ body {
     background: limegreen;
     position: absolute;
     bottom: 0px;
+  }
+  footer .footerContainer {
+    width: 100%;
+    margin-top: 500px;
+  }
+  footer .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+  footer .socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  footer .socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+  }
+  footer .socialIcons a:hover {
+    background-color: rgb(47, 120, 168);
+    transition: 0.2s;
+  }
+  footer .socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+  }
+  footer .footerNav {
+    margin: 30px 0;
+  }
+  footer .footerNav ul {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  footer .footerNav li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  footer .footerNav li a:hover {
+    opacity: 1;
+  }
+  footer .footerBottom {
+    opacity: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+  footer .footerBottom .designer {
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -193,6 +253,63 @@ body {
     position: absolute;
     bottom: 0px;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+  footer .footerContainer {
+    width: 100%;
+    padding: 70;
+    margin-top: 500px;
+  }
+  footer .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+  footer .socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  footer .socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+  }
+  footer .socialIcons a:hover {
+    background-color: rgb(47, 120, 168);
+    transition: 0.2s;
+  }
+  footer .socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+  }
+  footer .footerNav {
+    margin: 30px 0;
+  }
+  footer .footerNav ul {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  footer .footerNav li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  footer .footerNav li a:hover {
+    opacity: 1;
+  }
+  footer .footerBottom {
+    padding: 20px;
+    text-align: center;
+  }
+  footer .footerBottom .designer {
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+  }
+}/*# sourceMappingURL=Styles.css.map */
