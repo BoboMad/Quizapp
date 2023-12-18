@@ -34,6 +34,42 @@ const questions = [
             {text:'Eminem', correct: false},
             {text:'Taylor Swift', correct: false},
         ]
+    },
+    {
+        question: 'What is the chemical symbol for gold?',
+        answers: [
+            {text:'Gd', correct: false},
+            {text:'Au', correct: true},
+            {text:'Ag', correct: false},
+            {text:'Pt', correct: false},
+        ]
+    },
+    {
+        question: 'Which scientist proposed the theory of general relativity?',
+        answers: [
+            {text:'Isaac Newton', correct: false},
+            {text:'Nikola Tesla', correct: false},
+            {text:'Stephen Hawking', correct: false},
+            {text:'Albert Einstein', correct: true},
+        ]
+    },
+    {
+        question: 'What is the largest organ in the human body?',
+        answers: [
+            {text:'Liver', correct: false},
+            {text:'Brain', correct: false},
+            {text:'Skin', correct: true},
+            {text:'Heart', correct: false},
+        ]
+    },
+    {
+        question: 'Who holds the record for the most Olympic gold medals in the history of the Summer Olympics?',
+        answers: [
+            {text:'Michael Phelps', correct: true},
+            {text:'Usain Bolt', correct: false},
+            {text:'Larisa Latynina', correct: false},
+            {text:'Simone Biles', correct: false},
+        ]
     }
 ];
 
